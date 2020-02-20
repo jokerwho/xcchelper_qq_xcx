@@ -1,0 +1,62 @@
+.logo
+{
+  display: block;
+  text-align: center;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 90rpx;
+  box-shadow: 0rpx 0rpx 20rpx 0rpx #bbb;
+  margin: 80rpx 0rpx 10rpx 295rpx
+}
+.homecard
+{
+  width:690rpx;
+  box-shadow: 0rpx 0rpx 20rpx 0rpx #bbb;
+  margin: 32rpx 30rpx 32rpx 30rpx;
+  border-radius: 20rpx
+}
+.classfunc-col
+{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  text-align: left;
+  margin-left: 40rpx
+}
+.classfunc-ver
+{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center
+}
+.input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 15rpx;
+  height: 80rpx;
+  width: 360rpx;
+  font-size: 28rpx;
+  border:  4rpx solid #eee;
+  border-radius: 20rpx
+}
+.showText
+{
+  font-weight: 900
+}
+.btn
+{
+  background-color: rgb(26,173,25);
+  color:white;
+}
+.footer-text
+{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color: #bbb;
+  text-align: center
+}

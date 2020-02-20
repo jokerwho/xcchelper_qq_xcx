@@ -1,0 +1,41 @@
+.homecard
+{
+  width:690rpx;
+  box-shadow: 0rpx 0rpx 20rpx 0rpx #bbb;
+  margin: 32rpx 30rpx 32rpx 30rpx;
+  border-radius: 20rpx
+}
+.classfunc-ver
+{
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 28rpx;
+  color: #000;
+}
+.classfunc-col
+{
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 24rpx;
+  color: #000;
+}
+.title
+{
+  font-size: 60rpx;
+}
+.question
+{
+  font-size: 30rpx;
+  color: goldenrod;
+  font-weight: 700
+}
+.footer-text
+{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color: #bbb;
+  text-align: center
+}

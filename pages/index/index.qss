@@ -1,0 +1,185 @@
+.home
+{
+  display: inline-block;
+  overflow: hidden;
+}
+::-webkit-scrollbar{
+width: 0;
+height: 0;
+color: transparent;
+}
+.btnLabelX
+{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center
+}
+.btnItem
+{
+  display: flex;
+  box-shadow: 0rpx 0rpx 20rpx 0rpx #bbb;
+  border-radius: 20rpx;
+  width: 157.5rpx;
+  height: 80rpx;
+  font-size: 28rpx;
+  font-weight: 900;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0rpx 10rpx 0rpx 10rpx;
+  opacity: 0;
+  transform: translateX(200px)
+}
+.menu{
+  position: absolute;
+  display: flex;
+  flex-flow: column nowrap;
+  z-index: 50;
+  background-color: white;
+  box-shadow: 0 0 5rpx 0 #bbb;
+  border-radius: 20rpx;
+  margin: 60rpx 0rpx 0rpx 585rpx;
+  width: 120rpx;
+  height: 380rpx;
+  justify-content: center;
+  align-items: center
+}
+.menuItem
+{
+  display: flex;
+  margin-top: 30rpx;
+  font-size: 24rpx
+}
+.one{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 36rpx
+}
+.msg
+{
+  width: 550rpx;
+  height: 700rpx;
+  margin: 60rpx 0rpx 0rpx 100rpx;
+  position: absolute;
+  z-index: 80;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24rpx;
+  box-shadow: 0rpx 0rpx 20rpx 0rpx #bbb;
+  border-radius: 20rpx;
+  background-color: white
+}
+.homecard
+{
+  width:690rpx;
+  box-shadow: 0rpx 0rpx 20rpx 0rpx #bbb;
+  margin: 32rpx 30rpx 32rpx 30rpx;
+  border-radius: 20rpx;
+  opacity: 0
+}
+.homefunc
+{
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 28rpx;
+  text-align: center;
+}
+.homefunc-icon
+{
+  display: block;
+  width: 80rpx;
+  height: 80rpx;
+  padding:36rpx 75rpx 10rpx 75rpx;
+}
+.homefunc-text
+{
+  display: block;
+}
+.classfunc
+{
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 28rpx;
+  color: #7b7b7b;
+}
+.classfunc-col
+{
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 28rpx;
+  color: #000;
+}
+.classfunc-head-icon
+{
+  display: block;
+  width: 36rpx;
+  height: 36rpx;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+}
+.classfunc-head-text
+{
+  display: block;
+  padding: 18rpx 0rpx 20rpx 0rpx;
+}
+.classfunc-large-text
+{
+  display: block;
+  font-size: 36rpx;
+  text-align: center;
+  padding:30rpx 0rpx 18rpx 0rpx
+}
+.classfunc-digit-text
+{
+  display: block;
+  color: rgb(26,173,25);
+  font-size: 96rpx;
+  font-weight: 900;
+  text-align: center;
+  padding:0rpx 0rpx 30rpx 0rpx;
+}
+.classfunc-normal-text
+{
+  display: block;
+  flex-flow: column wrap;
+  color: #000;
+  font-size: 28rpx;
+  padding-top:20rpx
+}
+.classfunc-avatar
+{
+  overflow: hidden;
+  display: block;
+  width: 180rpx;
+  height: 180rpx;
+  margin: 50rpx 0rpx 0rpx 0rpx;
+  border-radius: 90rpx;
+  box-shadow: 0rpx 0rpx 10rpx 0rpx #7b7b7b
+}
+.footer-text
+{
+  display: block;
+  font-size: 20rpx;
+  color: #bbb;
+  text-align: center
+}
+.divLine
+{
+  background: #bbb;
+  width: 690rpx;
+  height: 2rpx;
+  margin: 0 auto;
+}
+.divLine-s
+{
+  background: #bbb;
+  width: 500rpx;
+  height: 2rpx;
+  margin: 0 auto;
+}

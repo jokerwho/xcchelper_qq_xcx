@@ -1,0 +1,23 @@
+.title
+{
+  display: flex;
+  flex-flow: row nowrap;
+  font-size: 40rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  margin-bottom: 30rpx;
+  margin-top: 30rpx
+}
+.footer-text
+{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color: #bbb;
+  text-align: center
+}

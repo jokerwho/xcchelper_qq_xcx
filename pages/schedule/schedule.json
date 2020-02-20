@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "dropdownmenu": "/component/dropdownmenu/dropdownmenu"
+  },
+  "navigationBarTitleText": "西院助手-课表",
+  "enablePullDownRefresh": false
+}

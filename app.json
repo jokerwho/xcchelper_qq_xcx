@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/me/me",
+    "pages/change/change",
+    "pages/grade/grade",
+    "pages/about/about",
+    "pages/schedule/schedule",
+    "pages/nav/nav",
+    "pages/setting/setting",
+    "pages/xuanke/xuanke",
+    "pages/xiudu/xiudu",
+    "pages/luqu/luqu",
+    "pages/luqu/result/result",
+    "pages/xuanke/bkk/bkk",
+    "pages/index/msg/msg"
+  ],
+  "window":{
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "西院助手",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#515151",
+    "backgroundColor":"#fff",
+    "selectedColor": "#1296db",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首 页",
+        "iconPath": "/images/homefunc/home.png",
+        "selectedIconPath": "/images/homefunc/home_set.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我",
+        "iconPath": "/images/homefunc/me.png",
+        "selectedIconPath": "/images/homefunc/me_set.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 36000
+  }
+}
