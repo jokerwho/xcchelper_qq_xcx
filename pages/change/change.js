@@ -69,9 +69,9 @@ Page({
                 data: res.data,
               }),
               qq.showToast({
-                title: '登录成功，请返回上拉刷新',
+                title: '登录成功，请返回首页上拉或点击刷新',
                 icon: 'none',
-                duration: 2000,
+                duration: 2500,
               }),
               qq.setStorage({
                 key: 'refresh',
@@ -83,7 +83,7 @@ Page({
               })
               setTimeout(function(){
                 qq.navigateBack();
-              },2500)
+              },3000)
           } else if (res.data == '学号或者密码错误！') {
             qq.showModal({
                 title: '错误',

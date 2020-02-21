@@ -24,7 +24,7 @@
       <image src="/images/homefunc/search.png" class="option-icon"></image>
       <text class="option-text">我的寻物</text>
     </button-->
-    <button hover-class="none" class="classfunc-ver homecard menuItem" style="height:100rpx;width:690rpx;margin-bottom:20rpx" bindtap="toRefresh" animation="{{refresh}}">
+    <button hover-class="none" class="classfunc-ver homecard menuItem" style="height:100rpx;width:690rpx;margin-bottom:10rpx" bindtap="toRefresh" animation="{{refresh}}">
       <image src="/images/homefunc/refresh.png" class="option-icon"></image>
       <text class="option-text">学期刷新</text>
     </button>
@@ -44,10 +44,10 @@
       <text class="option-text">关于</text>
     </button>
   </view>
-
 </block>
-<view animation="{{foot}}" class="footer-text" style="margin-top:30rpx;margin-bottom:30rpx">
-  <text>西院助手 V1.1</text>
+<view animation="{{foot}}" class="footer-text" style="margin-top:10rpx;margin-bottom:30rpx">
+<button type="primary" open-type = "addFriend" open-id="499E85FB57EFD2595A940BB3DC3DE283" bindaddfriend="addfriend">联系开发者</button>
+  <text style="margin-top:30rpx">西院助手 V1.1</text>
   <text>AlgoriMind-信息技术学院实验室</text>
   <text>2018-2020</text>
 </view>

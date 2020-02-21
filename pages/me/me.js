@@ -1,6 +1,5 @@
 // pages/me/me.js
 const app = getApp();
-
 Page({
 
   /**
@@ -14,46 +13,62 @@ Page({
       nickName: "",
     }
   },
+  addfriend:function(e){
+    qq.authorize({
+      scope:"setting.addFriend",
+      success:function(){ }
+    })
+  },
   fankui:function(){
     var that = this;
-    qq.getStorage({
-      key: 'xh',
-      success: function(res) {
-        var xh = res.data;
-        qq.getStorage({
-          key: 'pswd',
-          success: function(res) {
-            var pswd = res.data;
-            qq.request({
-              url:'https://api.algorimind.com:8000/one/fankui',
-              method: 'POST',
-              data: {
-                xh: xh,
-                pswd: pswd,
-              },
-              header: {
-                'content-type': 'application/x-www-form-urlencoded',
-                'Accept': 'application/json'
-              },
-              success:function(res){
-                if(res.data == 'ok'){
-                  qq.showModal({
-                    title:"反馈",
-                    content:"开发者已经收到你的反馈请求！",
-                    showCancel:false
+    qq.showModal({
+      title:'反馈',
+      content:'是否确定反馈？',
+      cancelText:'算了',
+      confirmText:'反馈',
+      success:function(res){
+        if(res.confirm){
+          qq.getStorage({
+            key: 'xh',
+            success: function(res) {
+              var xh = res.data;
+              qq.getStorage({
+                key: 'pswd',
+                success: function(res) {
+                  var pswd = res.data;
+                  qq.request({
+                    url:'https://api.algorimind.com:8000/one/fankui',
+                    method: 'POST',
+                    data: {
+                      xh: xh,
+                      pswd: pswd,
+                    },
+                    header: {
+                      'content-type': 'application/x-www-form-urlencoded',
+                      'Accept': 'application/json'
+                    },
+                    success:function(res){
+                      if(res.data == 'ok'){
+                        qq.showModal({
+                          title:"反馈",
+                          content:"开发者已经收到你的反馈请求！",
+                          showCancel:false
+                        })
+                      }
+                    }
                   })
                 }
-              }
-            })
-          }
-        })
-      },
-      fail:function(){
-        qq.showToast({
-          title: '请先登录！',
-          icon:'none'
-        })
-        return
+              })
+            },
+            fail:function(){
+              qq.showToast({
+                title: '请先登录！',
+                icon:'none'
+              })
+              return
+            }
+          })
+        }
       }
     })
   },

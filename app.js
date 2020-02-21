@@ -49,7 +49,7 @@ App({
     // 登录
     qq.login({
       success: res => {
-        
+        //console.log(res.code)
       }
     })
     this.globalData = {}

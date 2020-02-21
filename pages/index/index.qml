@@ -83,7 +83,7 @@
         <loading hidden="{{hidden}}">
           刷新中...
         </loading>
-        <image src="/images/homefunc/info.png" class="classfunc-head-icon" style="padding-left:380rpx;padding-right:10rpx" bindtap="calmsg"></image>
+        <image src="/images/homefunc/refresh.png" class="classfunc-head-icon" style="padding-left:380rpx;padding-right:10rpx" bindtap="onPullDownRefresh"></image>
       </view>
       <view class="classfunc-col">
         <view class="divLine"></view>
@@ -130,10 +130,10 @@
           <view class="classfunc-normal-text">所在院系：
             <text>{{mainInfo.collegeName}}</text>
           </view>
-          <view class="classfunc-normal-text">当前专业：
+          <view class="classfunc-normal-text">所在专业：
             <text>{{mainInfo.majorName}}</text>
           </view>
-          <view class="classfunc-normal-text">所在班级：
+          <view class="classfunc-normal-text">当前班级：
             <text>{{mainInfo.className}}</text>
           </view>
           <view class="classfunc-normal-text">电子邮箱：
