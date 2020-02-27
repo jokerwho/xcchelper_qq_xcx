@@ -15,7 +15,7 @@
   <view qq:if="{{item.courseCategory == '主修课程'}}">
   <view class="Item">
   <view qq:if="{{item.chooseSelf == '1'}}">
-    <image src="/images/del.png" class="delBtn" bindtap="tuike" data-name="{{item.courseTitle}}" data-id="{{item.classId}}"></image>
+    <image src="/images/del.png" class="delBtn" bindtap="tuike" data-teacher="{{item.teacher}}" data-course="{{item.courseTitle}}" data-kcid="{{item.courseId}}" data-doid="{{item.doId}}"></image>
   </view>
 <view class="rowItem">
   <view class="volItem">
@@ -42,7 +42,7 @@
   <view qq:if="{{item.courseCategory == '板块课'}}">
   <view class="Item">
   <view qq:if="{{item.chooseSelf == '1'}}">
-    <image src="/images/del.png" class="delBtn" bindtap="tuike" data-name="{{item.courseTitle}}" data-id="{{item.classId}}"></image>
+    <image src="/images/del.png" class="delBtn" bindtap="tuike" data-teacher="{{item.teacher}}" data-course="{{item.courseTitle}}" data-kcid="{{item.courseId}}" data-doid="{{item.doId}}"></image>
   </view>
 <view class="rowItem">
   <view class="volItem">
@@ -69,7 +69,7 @@
   <view qq:if="{{item.courseCategory == '通识选修课'}}">
   <view class="Item">
   <view qq:if="{{item.chooseSelf == '1'}}">
-    <image src="/images/del.png" class="delBtn" bindtap="tuike" data-name="{{item.courseTitle}}" data-id="{{item.classId}}"></image>
+    <image src="/images/del.png" class="delBtn" bindtap="tuike" data-teacher="{{item.teacher}}" data-course="{{item.courseTitle}}" data-kcid="{{item.courseId}}" data-doid="{{item.doId}}"></image>
   </view>
 <view class="rowItem">
   <view class="volItem">
@@ -93,7 +93,7 @@
 <text style="color:red">红色标题为待筛选</text>
 </view>
 <view class="footer-text" style="margin-top:30rpx;margin-bottom:30rpx">
-  <text>西院助手 V1.1</text>
+  <text>西院助手 V1.2</text>
   <text>AlgoriMind-信息技术学院实验室</text>
   <text>2018-2020</text>
 </view>

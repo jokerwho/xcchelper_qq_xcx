@@ -145,7 +145,7 @@
   <view class="foot"><image src="/images/in.png" class="classIcon"></image>在读</view>
 </view>
 <view class="footer-text" style="margin-top:30rpx;margin-bottom:30rpx">
-  <text>西院助手 V1.1</text>
+  <text>西院助手 V1.2</text>
   <text>AlgoriMind-信息技术学院实验室</text>
   <text>2018-2020</text>
 </view>

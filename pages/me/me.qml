@@ -47,7 +47,7 @@
 </block>
 <view animation="{{foot}}" class="footer-text" style="margin-top:10rpx;margin-bottom:30rpx">
 <button type="primary" open-type = "addFriend" open-id="499E85FB57EFD2595A940BB3DC3DE283" bindaddfriend="addfriend">联系开发者</button>
-  <text style="margin-top:30rpx">西院助手 V1.1</text>
+  <text style="margin-top:30rpx">西院助手 V1.2</text>
   <text>AlgoriMind-信息技术学院实验室</text>
   <text>2018-2020</text>
 </view>

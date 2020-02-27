@@ -8,7 +8,23 @@
   flex-direction: row;
   line-height: 80rpx;
 }
-  
+.classfunc-row{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+.circle{
+  width:24rpx;
+  height: 24rpx;
+  border-radius: 24rpx;
+  background-color: rgb(26,173,25);
+  margin-right: 15rpx
+}
+.switch{
+  width: 80rpx;
+  height: 80rpx;
+  overflow: hidden;
+}
 .tab-item {
   width: 20%;
   text-align: center;

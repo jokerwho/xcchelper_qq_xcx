@@ -23,6 +23,12 @@ Page({
           qq.getStorage({
             key: 'xh',
             success: function (res) {
+              if (testList.length == 0) {
+                qq.redirectTo({
+                  url: '/pages/xuanke/bkk/bkk?bkk=1',
+                })
+                return
+              }
               for (var i = 0; i < testList.length; i++) {
                 if (res.data === testList[i]) {
                   qq.redirectTo({
@@ -52,6 +58,12 @@ Page({
           qq.getStorage({
             key: 'xh',
             success: function (res) {
+              if (testList.length == 0) {
+                qq.redirectTo({
+                  url: '/pages/xuanke/bkk/bkk?bkk=2',
+                })
+                return
+              }
               for (var i = 0; i < testList.length; i++) {
                 if (res.data === testList[i]) {
                   qq.redirectTo({
@@ -121,18 +133,65 @@ Page({
     }
   },
   tuike:function(e){
-    var kcmc = e.target.dataset.name;
-    var id = e.target.dataset.id;
+    var teacher = e.target.dataset.teacher;
+    var course = e.target.dataset.course;
+    var kcId = e.target.dataset.kcid;
+    var doId = e.target.dataset.doid;
     qq.showModal({
       title: '退课',
-      content: '请确认是否退掉【' + kcmc + '】这门课？',
-      confirmColor:'red',
-      success(res){
-        if(res.confirm){
-          qq.showModal({
-            title: '错误',
-            content: '未在选课时间段，暂时不能退课！',
-            showCancel:false
+      content: '是否退掉【' + teacher + '】老师的【' + course + '】？',
+      confirmText: '退课',
+      confirmColor: 'red',
+      success: function (res) {
+        if (res.confirm) {
+          qq.getStorage({
+            key: 'xh',
+            success: function (res) {
+              var xh = res.data;
+              qq.getStorage({
+                key: 'pswd',
+                success: function (res) {
+                  var pswd = pswd;
+                  qq.request({
+                    url: 'https://api.algorimind.com:8000/choose/cancel',
+                    method: 'POST',
+                    data: {
+                      xh: xh,
+                      pswd: pswd,
+                      doId: doId,
+                      kcId: kcId,
+                    },
+                    header: {
+                      'content-type': 'application/x-www-form-urlencoded',
+                      'Accept': 'application/json'
+                    },
+                    success: function (res) {
+                      if(res.data == "1" || res.data == 1){
+                        qq.showModal({
+                          title: '退课情况',
+                          content: '退课成功！',
+                          showCancel: false
+                        })
+                        return
+                      }else if(res.data == "3" || res.data == 3){
+                        qq.showModal({
+                          title: '退课情况',
+                          content: '退课失败，未选择该课程！',
+                          showCancel: false
+                        })
+                        return
+                      }else{
+                        qq.showModal({
+                          title: '退课情况',
+                          content: '未知错误' + res.data + '，请联系开发者！',
+                        })
+                        return
+                      }
+                    }
+                  })
+                },
+              })
+            },
           })
         }
       }

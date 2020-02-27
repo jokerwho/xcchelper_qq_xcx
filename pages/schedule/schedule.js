@@ -16,7 +16,7 @@ Page({
     fri_c: 'gray',
     chooseTitle: ['','学期查询'],
     chooseData:[],
-    nowWeek:'第X周'
+    nowWeek:'第X周',
   },
   All: function () {
     this.setData({
@@ -76,6 +76,31 @@ Page({
       tue_c: 'gray',
       wed_c: 'gray',
       thr_c: 'gray',
+    })
+  },
+  changeMode:function(){
+    var that = this;
+    qq.getStorage({
+      key: 'weeksMode',
+      success: function(res) {
+        if(res.data == 1){
+          qq.setStorage({
+            key: 'weeksMode',
+            data: 0,
+          })
+          that.setData({
+            weeksMode:0
+          })
+        }else{
+          qq.setStorage({
+            key: 'weeksMode',
+            data: 1,
+          })
+          that.setData({
+            weeksMode:1
+          })
+        }
+      },
     })
   },
   selectedItem: function(e) {
@@ -178,13 +203,28 @@ Page({
           }, 2000)
         }
         var localGrade = res.data.grade;
+        qq.getStorage({
+          key: 'weeksMode',
+          success: function(res) {
+            that.setData({
+              weeksMode:res.data
+            })
+          },
+          fail:function(){
+            qq.setStorage({
+              key: 'weeksMode',
+              data: 1,
+            })
+          }
+        })
         qq.request({
           url: 'https://api.algorimind.com:8000/one/config',
           success: function (res) {
             if (res.data.schedulesTime) {
               that.setData({
                 chooseData: res.data[localGrade].chooseData,
-                nowWeek:res.data.nowWeek
+                nowWeek:res.data.nowWeek,
+                nowWeekI:res.data.nowWeekI
               })
               var schedulesTime = res.data.schedulesTime;
               var xnm, xqm;
@@ -194,9 +234,27 @@ Page({
               qq.getStorage({
                 key: 'classcache',
                 success: function (res) {
-                  that.setData({
-                    classData: res.data,
-                  })
+                  if(res.data[0].courseTime){
+                    that.setData({
+                      classData: res.data,
+                    })
+                  }else{
+                    qq.setStorage({
+                      key: 'weeksMode',
+                      data: 1,
+                    })
+                    qq.removeStorage({
+                      key: 'classcache',
+                      success: function(res) {
+                        qq.showModal({
+                          title: '提示',
+                          content: '课表更新，请返回首页重进',
+                          showCancel:false
+                        })
+                        return
+                      },
+                    })
+                  }
                 },
                 fail: function () {
                   qq.getStorage({
@@ -239,11 +297,11 @@ Page({
                                     key: 'classcache',
                                     data: res.data.normalCourse,
                                   })
+                                  that.setData({
+                                    classData: res.data.normalCourse,
+                                    hidden: true
+                                  })
                                 }
-                                that.setData({
-                                  classData: res.data.normalCourse,
-                                  hidden: true
-                                })
                               },
                               fail: function () {
                                 qq.showModal({
@@ -275,21 +333,22 @@ Page({
         })
       },
     })
+    var today = new Date().getDay();
+    var weeklist = ['周一','周二','周三','周四','周五','周一','周一'];
     if(isHome == 'true'){
       that.setData({
         isHome:true
       })
       if(tomo == 'true'){
         qq.setNavigationBarTitle({
-          title: '明日课程',
+          title: weeklist[today] + '课程',
         })
       }else{
         qq.setNavigationBarTitle({
-          title: '今日课程',
+          title: weeklist[today-1] + '课程',
         })
       }
     }
-    var today = new Date().getDay();
     if (tomo == 'true') {
       if (today == 0) {
         that.setData({

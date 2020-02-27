@@ -12,7 +12,7 @@
   <view qq:for="{{bkkData}}" qq:key="this">
       <view class="Item">
   <view qq:if="{{item.classPeople < item.classVolume}}">
-    <image src="/images/choose.png" class="chooseBtn" bindtap="choose" data-jsxx="{{item.teacher}}" data-jxb="{{item.classId}}"></image>
+    <image src="/images/choose.png" class="chooseBtn" bindtap="choose" data-teacher="{{item.teacher}}" data-course="{{item.courseTitle}}" data-kcid="{{item.courseId}}" data-doid="{{item.doId}}" data-kklxdm="{{item.kklxdm}}"></image>
   </view>
         <view class="rowItem">
           <view class="volItem">
@@ -35,7 +35,7 @@
 </view>
 
 <view class="footer-text" style="margin-top:30rpx;margin-bottom:30rpx">
-  <text>西院助手 V1.1</text>
+  <text>西院助手 V1.2</text>
   <text>AlgoriMind-信息技术学院实验室</text>
   <text>2018-2020</text>
 </view>
