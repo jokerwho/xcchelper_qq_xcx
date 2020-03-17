@@ -46,6 +46,16 @@ App({
     that.setData(json)
   },
   onLaunch: function() {
+    qq.getStorage({
+      key: 'weeksMode',
+      success: function (res) { },
+      fail: function (res) {
+        wx.setStorage({
+          key: 'weeksMode',
+          data: 1,
+        })
+      }
+    })
     // 登录
     qq.login({
       success: res => {

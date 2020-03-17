@@ -1,5 +1,8 @@
 // pages/schedule/schedule.js
 const app = getApp();
+const db = qq.cloud.database();
+const info = db.collection('info');
+
 Page({
   /**
    * 页面的初始数据
@@ -225,6 +228,38 @@ Page({
                 chooseData: res.data[localGrade].chooseData,
                 nowWeek:res.data.nowWeek,
                 nowWeekI:res.data.nowWeekI
+              })
+              var nowWeekI = res.data.nowWeekI;
+              var schedulesTime = res.data.schedulesTime;
+              qq.getStorage({
+                key: 'nowWeekI',
+                success: function(res) {
+                  var nowweeki = res.data;
+                  if(nowweeki != nowWeekI){
+                    var reDate = {
+                      detail:{
+                        selectedId:schedulesTime
+                      }
+                    };
+                    that.selectedItem(reDate);
+                  }
+                  qq.setStorage({
+                    key: 'nowWeekI',
+                    data: nowWeekI,
+                  })
+                },
+                fail:function(){
+                  var reDate = {
+                    detail: {
+                      selectedId: schedulesTime
+                    }
+                  };
+                  that.selectedItem(reDate);
+                  qq.setStorage({
+                    key: 'nowWeekI',
+                    data: nowWeekI,
+                  })
+                }
               })
               var schedulesTime = res.data.schedulesTime;
               var xnm, xqm;
