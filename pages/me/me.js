@@ -37,7 +37,7 @@ Page({
                 success: function(res) {
                   var pswd = res.data;
                   qq.request({
-                    url:'https://api.algorimind.com:8000/one/fankui',
+                    url:'https://api.xcchelper.cn/one/fankui',
                     method: 'POST',
                     data: {
                       xh: xh,
@@ -102,7 +102,7 @@ Page({
                 success: function(res) {
                   var pswd = res.data;
                   qq.request({
-                    url: 'https://api.algorimind.com:8000/info/study',
+                    url: 'https://api.xcchelper.cn/info/study',
                     method: 'POST',
                     data: {
                       xh: xh,

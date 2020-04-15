@@ -24,7 +24,7 @@ Page({
               hidden:false
             })
             qq.request({
-              url: 'https://api.algorimind.com:8000/info/message',
+              url: 'https://api.xcchelper.cn/info/message',
               method: 'POST',
               data: {
                 xh: xh,

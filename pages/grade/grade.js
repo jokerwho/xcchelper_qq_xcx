@@ -9,7 +9,7 @@ Page({
   selectedItem: function(e) {
     var that = this;
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success:function(res){
         if(res.data.gradesTime){
           var gradesTime = res.data.gradesTime;
@@ -29,7 +29,7 @@ Page({
                   success: function (res) {
                     var pswd = res.data;
                     qq.request({
-                      url: 'https://api.algorimind.com:8000/info/grade',
+                      url: 'https://api.xcchelper.cn/info/grade',
                       method: 'POST',
                       data: {
                         xh: xh,
@@ -104,7 +104,7 @@ Page({
         }
         var localGrade = res.data.grade;
         qq.request({
-          url: 'https://api.algorimind.com:8000/one/config',
+          url: 'https://api.xcchelper.cn/one/config',
           success:function(res){
             if(res.data.gradesTime){
               that.setData({
@@ -134,7 +134,7 @@ Page({
                           success: function (res) {
                             var pswd = res.data;
                             qq.request({
-                              url: 'https://api.algorimind.com:8000/info/grade',
+                              url: 'https://api.xcchelper.cn/info/grade',
                               method: 'POST',
                               data: {
                                 xh: xh,

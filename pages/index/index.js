@@ -28,7 +28,7 @@ Page({
     var nowhour = new Date().getHours();
 
     qq.request({
-      url: 'https://api.algorimind.com:8000/one',
+      url: 'https://api.xcchelper.cn/one',
       success: function(res) {
         that.setData({
           oneday: nowday,
@@ -90,7 +90,7 @@ Page({
     var nowtime = nowyear + '-' + nowmonth + '-' + nowday;
     var nowtime2 = nowyear + '/' + nowmonth + '/' + nowday;
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.count) {
           var cetDate = res.data.count.cetDate;
@@ -133,7 +133,7 @@ Page({
     var nowtime = nowyear + '-' + nowmonth + '-' + nowday;
     var nowtime2 = nowyear + '/' + nowmonth + '/' + nowday;
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.count) {
           var kyDate = res.data.count.kyDate;
@@ -176,7 +176,7 @@ Page({
     var nowtime = nowyear + '-' + nowmonth + '-' + nowday;
     var nowtime2 = nowyear + '/' + nowmonth + '/' + nowday;
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.count) {
           var qmDate = res.data.count.qmDate;
@@ -219,7 +219,7 @@ Page({
     var nowtime = nowyear + '-' + nowmonth + '-' + nowday;
     var nowtime2 = nowyear + '/' + nowmonth + '/' + nowday;
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.count) {
           var jsjDate = res.data.count.jsjDate;
@@ -262,7 +262,7 @@ Page({
     var nowtime = nowyear + '-' + nowmonth + '-' + nowday;
     var nowtime2 = nowyear + '/' + nowmonth + '/' + nowday;
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.count) {
           var jzDate = res.data.count.jzDate;
@@ -319,7 +319,7 @@ Page({
                   hidden:false
                 })
                 qq.request({
-                  url: 'https://api.algorimind.com:8000/info/study',
+                  url: 'https://api.xcchelper.cn/info/study',
                   method: 'POST',
                   data: {
                     xh: xh,
@@ -475,7 +475,7 @@ Page({
     that.getstudy();
     setTimeout(function(){
       qq.request({
-        url: 'https://api.algorimind.com:8000/one/config',
+        url: 'https://api.xcchelper.cn/one/config',
         success: function (res) {
           if (res.data.msg) {
             var title = res.data.msg.title;

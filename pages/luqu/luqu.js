@@ -12,7 +12,7 @@ Page({
     var value = e.detail.value.ksh;
     if(value.length == 14){
       qq.request({
-        url: 'https://api.algorimind.com:8000/recruit/ksh',
+        url: 'https://api.xcchelper.cn/recruit/ksh',
         method: 'POST',
         data: {
           ksh:String(value)
@@ -55,7 +55,7 @@ Page({
       })
     }else if(value.length == 18){
       qq.request({
-        url: 'https://api.algorimind.com:8000/recruit/idcard',
+        url: 'https://api.xcchelper.cn/recruit/idcard',
         method: 'POST',
         data: {
           idcard: String(value)

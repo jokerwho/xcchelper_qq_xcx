@@ -109,7 +109,7 @@ Page({
   selectedItem: function(e) {
     var that = this;
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.schedulesTime) {
           var schedulesTime = res.data.schedulesTime;
@@ -129,7 +129,7 @@ Page({
                   success: function (res) {
                     var pswd = res.data;
                     qq.request({
-                      url: 'https://api.algorimind.com:8000/info/schedule',
+                      url: 'https://api.xcchelper.cn/info/schedule',
                       method: 'POST',
                       data: {
                         xh: xh,
@@ -221,7 +221,7 @@ Page({
           }
         })
         qq.request({
-          url: 'https://api.algorimind.com:8000/one/config',
+          url: 'https://api.xcchelper.cn/one/config',
           success: function (res) {
             if (res.data.schedulesTime) {
               that.setData({
@@ -304,7 +304,7 @@ Page({
                           success: function (res) {
                             var pswd = res.data;
                             qq.request({
-                              url: 'https://api.algorimind.com:8000/info/schedule',
+                              url: 'https://api.xcchelper.cn/info/schedule',
                               method: 'POST',
                               data: {
                                 xh: xh,

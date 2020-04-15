@@ -39,7 +39,7 @@ Page({
         btnhidden: true,
       }),
       qq.request({
-        url: 'https://api.algorimind.com:8000/info/pinfo',
+        url: 'https://api.xcchelper.cn/info/pinfo',
         method:'POST',
         data:{
           xh:xh,

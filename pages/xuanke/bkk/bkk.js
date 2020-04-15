@@ -33,7 +33,7 @@ Page({
                 success: function(res) {
                   var pswd = pswd;
                   qq.request({
-                    url: 'https://api.algorimind.com:8000/choose/choose',
+                    url: 'https://api.xcchelper.cn/choose/choose',
                     method: 'POST',
                     data: {
                       xh: xh,
@@ -79,7 +79,7 @@ Page({
   },
   Bk1: function () {
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.test) {
           var testList = res.data.test;
@@ -114,7 +114,7 @@ Page({
   },
   Bk2: function () {
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.test) {
           var testList = res.data.test;
@@ -149,7 +149,7 @@ Page({
   },
   Ts: function () {
     qq.request({
-      url: 'https://api.algorimind.com:8000/one/config',
+      url: 'https://api.xcchelper.cn/one/config',
       success: function (res) {
         if (res.data.test) {
           var testList = res.data.test;
@@ -207,7 +207,7 @@ Page({
               hidden: false
             })
             qq.request({
-              url: 'https://api.algorimind.com:8000/choose/bkk',
+              url: 'https://api.xcchelper.cn/choose/bkk',
               method: 'POST',
               data: {
                 xh: xh,
